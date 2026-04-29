@@ -1,0 +1,3110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simagang</title>
+        <link rel="icon" type="image/png" href="http://127.0.0.1:8000/logo-prov-jatim.png" />
+
+        <!-- Google Font Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        <script type="module" src="http://[::1]:5173/@vite/client" data-navigate-track="reload"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" data-navigate-track="reload" /><script type="module" src="http://[::1]:5173/resources/js/app.js" data-navigate-track="reload"></script>            <link rel="stylesheet" href="http://127.0.0.1:8000/css/home.css?v=1766487569" />
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/mobile-force.css?v=1766487569" />
+    </head>
+    <body class="bg-slate-100">
+        <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-lg border-b border-gray-200/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+
+            <div class="flex items-center group">
+                <span class="text-2xl md:text-3xl font-extrabold tracking-wide
+                    bg-gradient-to-r from-[#FFC107] to-[#1A8EC4]
+                    bg-clip-text text-transparent
+                    hover:scale-105 transition-transform duration-300 cursor-pointer
+                    drop-shadow-sm"
+                    style="font-family: 'Poppins', sans-serif;">
+                    SIMAGANG
+                </span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-1">
+                <a href="/"
+                   class="px-4 py-2 font-semibold text-gray-700 rounded-lg
+                          hover:text-[#1A8EC4] hover:bg-blue-50/80
+                          transition-all duration-300 ease-in-out
+                          relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFC107] to-[#1A8EC4]
+                                 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#about"
+                   class="px-4 py-2 font-semibold text-gray-700 rounded-lg
+                          hover:text-[#1A8EC4] hover:bg-blue-50/80
+                          transition-all duration-300 ease-in-out
+                          relative group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFC107] to-[#1A8EC4]
+                                 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#information"
+                   class="px-4 py-2 font-semibold text-gray-700 rounded-lg
+                          hover:text-[#1A8EC4] hover:bg-blue-50/80
+                          transition-all duration-300 ease-in-out
+                          relative group">
+                    Information
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFC107] to-[#1A8EC4]
+                                 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#testimonial"
+                   class="px-4 py-2 font-semibold text-gray-700 rounded-lg
+                          hover:text-[#1A8EC4] hover:bg-blue-50/80
+                          transition-all duration-300 ease-in-out
+                          relative group">
+                    Testimonial
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFC107] to-[#1A8EC4]
+                                 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <!-- Desktop Login Button -->
+            <div class="hidden lg:flex">
+                <a href="admin/login"
+                   class="px-6 py-2.5 font-semibold text-white rounded-lg
+                          bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD]
+                          hover:from-[#0D6EAD] hover:to-[#1A8EC4]
+                          shadow-md hover:shadow-xl
+                          transform hover:scale-105
+                          transition-all duration-300 ease-in-out">
+                    Login Admin
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button"
+                    class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100
+                           focus:outline-none focus:ring-2 focus:ring-blue-500/50
+                           transition-all duration-300"
+                    onclick="toggleMenu()">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6 transition-transform duration-300"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6 hidden transition-transform duration-300"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu with Slide Animation -->
+    <div id="mobile-menu"
+         class="lg:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out
+                bg-white/95 backdrop-blur-lg border-t border-gray-200/50">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+            <a href="/"
+               class="block px-4 py-3 rounded-lg font-semibold text-gray-700
+                      hover:bg-gradient-to-r hover:from-blue-50 hover:to-orange-50
+                      hover:text-[#1A8EC4] transition-all duration-300
+                      transform hover:translate-x-2">
+                Home
+            </a>
+            <a href="#about"
+               class="block px-4 py-3 rounded-lg font-semibold text-gray-700
+                      hover:bg-gradient-to-r hover:from-blue-50 hover:to-orange-50
+                      hover:text-[#1A8EC4] transition-all duration-300
+                      transform hover:translate-x-2">
+                About
+            </a>
+            <a href="#information"
+               class="block px-4 py-3 rounded-lg font-semibold text-gray-700
+                      hover:bg-gradient-to-r hover:from-blue-50 hover:to-orange-50
+                      hover:text-[#1A8EC4] transition-all duration-300
+                      transform hover:translate-x-2">
+                Information
+            </a>
+            <a href="#testimonial"
+               class="block px-4 py-3 rounded-lg font-semibold text-gray-700
+                      hover:bg-gradient-to-r hover:from-blue-50 hover:to-orange-50
+                      hover:text-[#1A8EC4] transition-all duration-300
+                      transform hover:translate-x-2">
+                Testimonial
+            </a>
+            <a href="admin/login"
+               class="block mt-4 px-5 py-4 text-center font-semibold text-white rounded-lg
+                      bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD]
+                      hover:from-[#0D6EAD] hover:to-[#1A8EC4]
+                      shadow-md hover:shadow-lg
+                      transform hover:scale-102
+                      transition-all duration-300">
+                Login Admin
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    function toggleMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const menuButton = document.getElementById('mobile-menu-button');
+
+        if (mobileMenu.style.maxHeight === '0px' || mobileMenu.style.maxHeight === '') {
+            // Open menu
+            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            menuButton.classList.add('rotate-90');
+        } else {
+            // Close menu
+            mobileMenu.style.maxHeight = '0px';
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            menuButton.classList.remove('rotate-90');
+        }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuButton = document.getElementById('mobile-menu-button');
+
+        if (mobileMenu && menuButton &&
+            !mobileMenu.contains(event.target) &&
+            !menuButton.contains(event.target) &&
+            mobileMenu.style.maxHeight !== '0px' &&
+            mobileMenu.style.maxHeight !== '') {
+            toggleMenu();
+        }
+    });
+
+    // Close mobile menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (window.innerWidth >= 1024 && mobileMenu.style.maxHeight !== '0px') {
+            mobileMenu.style.maxHeight = '0px';
+            document.getElementById('menu-icon').classList.remove('hidden');
+            document.getElementById('close-icon').classList.add('hidden');
+        }
+    });
+</script>
+
+        <main>
+            <div class="">
+                    
+    <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
+    >
+        
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+                class="absolute top-20 left-10 w-32 h-16 bg-white/60 rounded-full blur-xl animate-float"
+            ></div>
+            <div
+                class="absolute top-40 right-20 w-40 h-20 bg-blue-100/40 rounded-full blur-2xl animate-float-delayed"
+            ></div>
+            <div
+                class="absolute bottom-40 left-1/4 w-36 h-18 bg-orange-100/30 rounded-full blur-xl animate-float"
+            ></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-6xl mx-auto">
+            <div class="animate-fade-in-up">
+                
+                <div class="mb-8">
+                    <style>
+                        @media (max-width: 768px) {
+                            .mobile-full-width-illustration {
+                                position: relative;
+                                left: 50%;
+                                right: 50%;
+                                margin-left: -50vw;
+                                margin-right: -50vw;
+                                width: 100vw;
+                                max-width: 100vw;
+                                padding: 0;
+                            }
+                        }
+                    </style>
+                    <div class="building-illustration mobile-full-width-illustration">
+                        <div class="sky">
+                            
+                            <div class="cloud cloud-1"></div>
+                            <div class="cloud cloud-2"></div>
+                            <div class="cloud cloud-3"></div>
+                            <div class="cloud cloud-4"></div>
+
+                            
+                            <div class="background-buildings">
+                                <div class="bg-building bg-building-1"></div>
+                                <div class="bg-building bg-building-2"></div>
+                                <div class="bg-building bg-building-3"></div>
+                                <div class="bg-building bg-building-4"></div>
+                                <div class="bg-building bg-building-5"></div>
+                                <div class="bg-building bg-building-6"></div>
+                                <div class="bg-building bg-building-7"></div>
+                                <div class="bg-building bg-building-8"></div>
+                                <div class="bg-building bg-building-9"></div>
+                                <div class="bg-building bg-building-10"></div>
+                            </div>
+
+                            
+                            <div class="city-skyline">
+                                
+                                <div class="building building-1">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-2">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-3">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-main">
+                                    
+                                    <div class="building-sign">
+                                        <div class="building-sign-text">BAKORWIL III MALANG</div>
+                                    </div>
+
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-5">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-6">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="building building-7">
+                                    <div class="building-windows">
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                        <div class="window"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="people">
+                                <div class="person">
+                                    <div class="person-head"></div>
+                                    <div class="person-body"></div>
+                                    <div class="person-legs">
+                                        <div class="person-leg"></div>
+                                        <div class="person-leg"></div>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="person-head"></div>
+                                    <div class="person-body"></div>
+                                    <div class="person-legs">
+                                        <div class="person-leg"></div>
+                                        <div class="person-leg"></div>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="person-head"></div>
+                                    <div class="person-body"></div>
+                                    <div class="person-legs">
+                                        <div class="person-leg"></div>
+                                        <div class="person-leg"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="ground"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="px-4 sm:px-6 lg:px-8">
+                    
+                    <div
+                        class="inline-flex items-center px-6 py-2 mb-2 bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] rounded-full shadow-lg"
+                    >
+                        <span class="text-white font-semibold text-sm tracking-wide">
+                            SELAMAT DATANG
+                        </span>
+                    </div>
+
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-tight px-4">
+                        <span
+                            class="bg-gradient-to-r from-[#FFC107] to-[#1A8EC4] bg-clip-text text-transparent drop-shadow-lg"
+                        >
+                            SIMAGANG
+                        </span>
+                    </h1>
+
+                    
+                    <p
+                        class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-medium mb-6 max-w-3xl mx-auto leading-relaxed px-6"
+                    >
+                        Sistem Informasi Magang ini dirancang untuk membantu mahasiswa dalam
+                        pendaftaran kegiatan magang di
+                        <span class="font-bold text-[#1A8EC4]">
+                            Badan Koordinasi Wilayah III Malang
+                        </span>
+                    </p>
+
+                    
+                    <div class="flex justify-center mb-6 px-4">
+                        <a
+                            href="/alur-penerimaan.pdf"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm sm:text-base font-semibold text-white rounded-full bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] hover:from-[#0D6EAD] hover:to-[#1A8EC4] shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
+                        >
+                            <span>Alur Penerimaan</span>
+                            <svg
+                                class="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:scale-105 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+                About
+                <span
+                    class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] bg-clip-text text-transparent"
+                >
+                    Program
+                </span>
+            </h2>
+            <p class="text-md text-gray-600 max-w-3xl mx-auto">
+                Tentang Program Pemagangan di Bakorwil III Malang
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <div class="flex justify-center lg:justify-start">
+                <div class="w-full max-w-md">
+                    <img
+                        src="http://127.0.0.1:8000/images/about-ilustrasi.png"
+                        alt="Tentang Program Illustration"
+                        class="w-full h-auto object-contain"
+                    />
+                </div>
+            </div>
+
+            
+            <div class="space-y-8">
+                
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md border border-blue-100 overflow-hidden mb-2"
+                >
+                    <button
+                        class="w-full px-6 py-4 flex items-center justify-between text-left bg-gradient-to-r from-[#1A8EC4]/10 to-[#0D6EAD]/5 hover:from-[#1A8EC4]/20 hover:to-[#0D6EAD]/10 transition-all duration-200"
+                        onclick="toggleAccordion('accordion1')"
+                    >
+                        <span class="font-semibold text-gray-800">Tentang Program</span>
+                        <div class="relative w-5 h-5">
+                            
+                            <svg
+                                id="icon-down-accordion1"
+                                class="w-5 h-5 text-[#1A8EC4] absolute transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                            
+                            <svg
+                                id="icon-right-accordion1"
+                                class="w-5 h-5 text-[#1A8EC4] absolute opacity-0 transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <div
+                        id="accordion1"
+                        class="accordion-content overflow-hidden transition-all duration-300"
+                        style="max-height: 500px"
+                    >
+                        <div
+                            class="px-6 py-4 text-gray-700 leading-relaxed border-t border-blue-100 bg-white"
+                        >
+                            Program magang sekaligus pelatihan kerja yang dirancang untuk memberikan
+                            pengalaman kerja nyata bagi mahasiswa maupun lulusan perguruan tinggi
+                            (fresh graduate). Program ini bertujuan untuk meningkatkan kompetensi,
+                            keterampilan, serta kesiapan peserta dalam memasuki dunia kerja,
+                            khususnya di lingkungan pemerintahan.
+                            <br />
+                            <br />
+                            Program pemagangan ini dilaksanakan di Badan Koordinasi Wilayah
+                            Pemerintahan dan Pembangunan (Bakorwil) III Malang, yang beralamat di
+                            Jl. Simpang Ijen No.2, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa
+                            Timur 65119. Selama mengikuti program, peserta akan terlibat secara
+                            langsung dalam berbagai aktivitas kerja di lingkungan pemerintahan
+                            daerah, dengan pendampingan mentor atau pembimbing dari instansi
+                            terkait.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md border border-blue-100 overflow-hidden mb-2"
+                >
+                    <button
+                        class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-blue-50/50 transition-all duration-200"
+                        onclick="toggleAccordion('accordion2')"
+                    >
+                        <span class="font-semibold text-gray-800">Peserta Pemagangan</span>
+                        <div class="relative w-5 h-5">
+                            
+                            <svg
+                                id="icon-down-accordion2"
+                                class="w-5 h-5 text-[#1A8EC4] absolute opacity-0 transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                            
+                            <svg
+                                id="icon-right-accordion2"
+                                class="w-5 h-5 text-[#1A8EC4] absolute transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <div
+                        id="accordion2"
+                        class="accordion-content max-h-0 overflow-hidden transition-all duration-300"
+                    >
+                        <div
+                            class="px-6 py-4 text-gray-700 leading-relaxed border-t border-blue-100 bg-white"
+                        >
+                            Peserta program pemagangan adalah mahasiswa perguruan tinggi yang telah
+                            memenuhi persyaratan administrasi maupun akademik sesuai dengan
+                            ketentuan yang berlaku serta telah terdaftar secara resmi sebagai
+                            peserta program. Program ini ditujukan bagi individu yang memiliki
+                            motivasi tinggi untuk belajar, mengembangkan keterampilan, dan
+                            memperoleh pengalaman kerja secara langsung di lingkungan pemerintahan.
+                            <br />
+                            <br />
+                            Peserta pemagangan diharapkan mampu mengikuti seluruh rangkaian kegiatan
+                            yang telah ditetapkan, mematuhi peraturan dan tata tertib yang berlaku
+                            di Bakorwil III Malang, serta menunjukkan sikap profesional, disiplin,
+                            dan bertanggung jawab selama pelaksanaan program. Selain itu, peserta
+                            juga diharapkan dapat beradaptasi dengan budaya kerja pemerintahan serta
+                            menjalin kerja sama yang baik dengan mentor maupun pegawai di unit
+                            penempatan.
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md border border-blue-100 overflow-hidden"
+                >
+                    <button
+                        class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-blue-50/50 transition-all duration-200"
+                        onclick="toggleAccordion('accordion3')"
+                    >
+                        <span class="font-semibold text-gray-800">Penyelenggara Pemagangan</span>
+                        <div class="relative w-5 h-5">
+                            
+                            <svg
+                                id="icon-down-accordion3"
+                                class="w-5 h-5 text-[#1A8EC4] absolute opacity-0 transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                            
+                            <svg
+                                id="icon-right-accordion3"
+                                class="w-5 h-5 text-[#1A8EC4] absolute transition-opacity duration-200"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <div
+                        id="accordion3"
+                        class="accordion-content max-h-0 overflow-hidden transition-all duration-300"
+                    >
+                        <div
+                            class="px-6 py-4 text-gray-700 leading-relaxed border-t border-blue-100 bg-white"
+                        >
+                            Program pemagangan ini diselenggarakan oleh Badan Koordinasi Wilayah
+                            Pemerintahan dan Pembangunan (Bakorwil) III Malang sebagai instansi
+                            pemerintah yang memiliki peran strategis dalam koordinasi, pembinaan,
+                            dan fasilitasi penyelenggaraan pemerintahan serta pembangunan di wilayah
+                            kerjanya. Bakorwil III Malang bertanggung jawab penuh dalam perencanaan,
+                            pelaksanaan, pengawasan, serta evaluasi kegiatan pemagangan agar program
+                            dapat berjalan secara efektif dan sesuai dengan tujuan yang telah
+                            ditetapkan.
+                            <br><br>
+                            Dalam pelaksanaan program pemagangan, Bakorwil III Malang
+                            menyediakan lingkungan kerja yang kondusif, mentor atau pembimbing yang
+                            kompeten, serta sarana dan prasarana pendukung guna menunjang proses
+                            pembelajaran peserta.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(id)
+        const iconDown = document.getElementById('icon-down-' + id)
+        const iconRight = document.getElementById('icon-right-' + id)
+
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px'
+
+        // Close all accordions and show right arrows
+        document.querySelectorAll('.accordion-content').forEach((item) => {
+            item.style.maxHeight = '0px'
+        })
+        document.querySelectorAll('[id^="icon-down-"]').forEach((item) => {
+            item.style.opacity = '0'
+        })
+        document.querySelectorAll('[id^="icon-right-"]').forEach((item) => {
+            item.style.opacity = '1'
+        })
+
+        // If clicked accordion was closed, open it and show down arrow
+        if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + 'px'
+            iconDown.style.opacity = '1'
+            iconRight.style.opacity = '0'
+        }
+    }
+
+    function initializeAccordion() {
+        const firstAccordionContent = document.getElementById('accordion1')
+        const firstIconDown = document.getElementById('icon-down-accordion1')
+        const firstIconRight = document.getElementById('icon-right-accordion1')
+
+        if (firstAccordionContent && firstIconDown && firstIconRight) {
+            // Open first accordion
+            firstAccordionContent.style.maxHeight = firstAccordionContent.scrollHeight + 'px'
+            firstIconDown.style.opacity = '1'
+            firstIconRight.style.opacity = '0'
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach((item) => {
+                if (item.id !== 'accordion1') {
+                    item.style.maxHeight = '0px'
+                }
+            })
+
+            // Show right arrows for closed accordions
+            document.querySelectorAll('[id^="icon-down-"]').forEach((item) => {
+                if (item.id !== 'icon-down-accordion1') {
+                    item.style.opacity = '0'
+                }
+            })
+            document.querySelectorAll('[id^="icon-right-"]').forEach((item) => {
+                if (item.id !== 'icon-right-accordion1') {
+                    item.style.opacity = '1'
+                }
+            })
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initializeAccordion)
+</script>
+
+    
+    <section id="information" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+                Informasi
+                <span
+                    class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] bg-clip-text text-transparent"
+                >
+                    Program
+                </span>
+            </h2>
+            <p class="text-md text-gray-600 max-w-3xl mx-auto">
+                Informasi penting seputar program magang yang perlu diketahui oleh mahasiswa
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            <a
+                href="https://wa.me/6281937065659?text=Selamat%20(pagi%2Fsiang%2Fsore)%20Bapak%20Wildan%2C%0APerkenalkan%20nama%20saya%20(.....)%2C%20saya%20dari%20(asal%20sekolah%2Funiversitas)%20jurusan%20(.....)%0A%0ASaya%20ingin%20mengetahui%20apakah%20saat%20ini%20Bakorwil%20III%20Malang%20membuka%20kesempatan%20magang%20yang%20berkaitan%20dengan%20jurusan%20saya%3F%20Jika%20iya%2C%20saya%20akan%20senang%20untuk%20mengetahui%20lebih%20lanjut%20tentang%20prosedur%20dan%20kriteria%20seleksinya.%0A%0AAtas%20waktu%20dan%20perhatian%20bapak%20saya%20ucapkan%20terimakasih.%0A%0AHormat%20saya%2C%0A(nama%20pengirim)"
+                target="_blank"
+                class="group bg-gradient-to-br from-blue-50 via-white to-blue-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                        NARAHUBUNG MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Hubungi via WhatsApp</p>
+                </div>
+            </a>
+
+            
+            <a
+                href="https://docs.google.com/document/d/1FSne8aTNe0xtdaLf0_c3JUvL1eEoAtf_noYfWM9Hpos/edit?tab=t.0"
+                target="_blank"
+                class="group bg-gradient-to-br from-green-50 via-white to-green-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-green-600 transition-colors">
+                        UNDUH TUGAS<br>PRA-MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Download dari Google Docs</p>
+                </div>
+            </a>
+
+            
+            <a
+                href="https://docs.google.com/document/d/1XavQGuc1PZizNFFBHdAmbzwO5jD_JP4AGyDet97WTbM/edit?tab=t.0"
+                target="_blank"
+                class="group bg-gradient-to-br from-purple-50 via-white to-purple-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">
+                        UNDUH TUGAS<br>PASCA MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Download dari Google Docs</p>
+                </div>
+            </a>
+
+            
+            <a
+                href="https://docs.google.com/document/d/1eo-sQTvOjMKgOj1a3jsgtriswxtiy3gjSSgkivrtI3o/edit?tab=t.0"
+                target="_blank"
+                class="group bg-gradient-to-br from-orange-50 via-white to-orange-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-orange-600 transition-colors">
+                        TATA TERTIB MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Lihat peraturan magang</p>
+                </div>
+            </a>
+
+            
+            <a
+                href="https://drive.google.com/drive/folders/1a0CFnjmQmXPsO_Nmg9pzDfrTKxFbXyIn"
+                target="_blank"
+                class="group bg-gradient-to-br from-teal-50 via-white to-teal-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-teal-100 hover:border-teal-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-teal-600 transition-colors">
+                        PENGUMPULAN TUGAS<br>PRA-MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Upload ke Google Drive</p>
+                </div>
+            </a>
+
+            
+            <a
+                href="https://drive.google.com/drive/folders/1G_92aWKkh1UdoIbq2247eb1848Ilp6qe"
+                target="_blank"
+                class="group bg-gradient-to-br from-pink-50 via-white to-pink-50/50 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-pink-100 hover:border-pink-300 flex flex-col items-center text-center space-y-4"
+            >
+                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
+                        PENGUMPULAN TUGAS<br>PASCA MAGANG
+                    </h3>
+                    <p class="text-sm text-gray-600">Upload ke Google Drive</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+            <div class="inline-block mb-2">
+                <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">
+                    Periode Aktif
+                </span>
+            </div>
+            <h2 class="text-4xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+                Sisa Kuota
+                <span class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] bg-clip-text text-transparent">
+                    Divisi
+                </span>
+            </h2>
+            <p class="text-md text-gray-600 max-w-3xl mx-auto">
+                Informasi ketersediaan kuota untuk setiap divisi dalam periode ini
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+                            
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-blue-100 hover:border-blue-300 hover:-translate-y-2 relative overflow-hidden ">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"></div>
+
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                Administrasi Perkantoran
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Kompetensi Administrasi</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                </svg>
+                                <span>Diperbarui: 18 Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V19z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-600">Kuota Tersedia</span>
+                            <span class="text-2xl font-bold text-blue-600">8 <span class="text-sm text-gray-400">/ 12</span></span>
+                        </div>
+                        <div class="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 h-4 rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 33.333333333333%">
+                                <div class="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-500">Progress</span>
+                            <span class="font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">33% terisi</span>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-purple-100 hover:border-purple-300 hover:-translate-y-2 relative overflow-hidden ">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600"></div>
+
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                                Pengembang Aplikasi
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Kompetensi IT &amp; Development</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                </svg>
+                                <span>Diperbarui: 19 Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-600">Kuota Tersedia</span>
+                            <span class="text-2xl font-bold text-purple-600">3 <span class="text-sm text-gray-400">/ 6</span></span>
+                        </div>
+                        <div class="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 h-4 rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 50%">
+                                <div class="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-500">Progress</span>
+                            <span class="font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded-full">50% terisi</span>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-green-100 hover:border-green-300 hover:-translate-y-2 relative overflow-hidden ">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600"></div>
+
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                                Pelayanan Publik
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Kompetensi Layanan Masyarakat</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                </svg>
+                                <span>Diperbarui: 17 Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-600">Kuota Tersedia</span>
+                            <span class="text-2xl font-bold text-green-600">4 <span class="text-sm text-gray-400">/ 6</span></span>
+                        </div>
+                        <div class="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-green-500 to-green-600 h-4 rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 33.333333333333%">
+                                <div class="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-500">Progress</span>
+                            <span class="font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full">33% terisi</span>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-pink-100 hover:border-pink-300 hover:-translate-y-2 relative overflow-hidden ">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600"></div>
+
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                                Manajemen Media Sosial
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Kompetensi Digital Marketing</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                </svg>
+                                <span>Diperbarui: 19 Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-600">Kuota Tersedia</span>
+                            <span class="text-2xl font-bold text-pink-600">1 <span class="text-sm text-gray-400">/ 2</span></span>
+                        </div>
+                        <div class="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 h-4 rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 50%">
+                                <div class="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-500">Progress</span>
+                            <span class="font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded-full">50% terisi</span>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-orange-200 hover:border-orange-400 hover:-translate-y-2 relative overflow-hidden md:col-span-2">
+                    
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600"></div>
+
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                                Administrasi Keuangan
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-3">Kompetensi Keuangan &amp; Akuntansi</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                </svg>
+                                <span>Diperbarui: 18 Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-600">Kuota Tersedia</span>
+                            <span class="text-2xl font-bold text-orange-600">1 <span class="text-sm text-gray-400">/ 2</span></span>
+                        </div>
+                        <div class="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 h-4 rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 50%">
+                                <div class="absolute inset-0 bg-white opacity-20 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-500">Progress</span>
+                            <span class="font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded-full">50% terisi</span>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+        
+        <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-2xl shadow-lg">
+            <div class="flex items-start">
+                <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center w-12 h-12 bg-blue-500 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <p class="text-base font-bold text-blue-900 mb-2">Informasi Penting</p>
+                    <p class="text-sm text-blue-800 leading-relaxed">
+                        Kuota yang ditampilkan adalah kuota tersisa untuk periode ini. Data diperbarui secara berkala.
+                        <span class="font-semibold">Segera daftarkan diri Anda sebelum kuota penuh!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    /* Hide native select */
+    .hidden-select {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Custom select wrapper */
+    .custom-select-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Custom select container */
+    .custom-select {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Custom select trigger (the button) */
+    .custom-select-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0.75rem;
+        background-color: white;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        min-height: 42px;
+    }
+
+    .custom-select-trigger:hover {
+        border-color: #60a5fa;
+    }
+
+    .custom-select.open .custom-select-trigger {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .custom-select-trigger span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.875rem;
+        color: #374151;
+    }
+
+    .custom-select-trigger svg {
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+        color: #6b7280;
+        transition: transform 0.2s;
+    }
+
+    .custom-select.open .custom-select-trigger svg {
+        transform: rotate(180deg);
+    }
+
+    /* Custom options dropdown */
+    .custom-options {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        right: 0;
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        max-height: 250px;
+        overflow-y: auto;
+        z-index: 50;
+        display: none;
+        animation: slideDown 0.2s ease-out;
+    }
+
+    .custom-select.open .custom-options {
+        display: block;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Custom option item */
+    .custom-option {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-size: 0.875rem;
+        color: #1f2937;
+    }
+
+    .custom-option:hover {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+    }
+
+    .custom-option.selected {
+        background-color: #eff6ff;
+        color: #3b82f6;
+        font-weight: 500;
+    }
+
+    .custom-option.selected:hover {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+    }
+
+    /* First and last option rounded */
+    .custom-option:first-child {
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+    }
+
+    .custom-option:last-child {
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+    }
+
+    /* Scrollbar styling */
+    .custom-options::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-options::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 0.75rem;
+    }
+
+    .custom-options::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 0.75rem;
+    }
+
+    .custom-options::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+</style>
+
+<section id="information" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+                Mahasiswa <span class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] bg-clip-text text-transparent">Magang</span>
+            </h2>
+            <p class="text-md text-gray-600 max-w-3xl mx-auto">
+                Data sebaran dan daftar mahasiswa magang di Bakorwil III Malang
+            </p>
+        </div>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+             <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Statistik Status</h3>
+                <div class="relative h-64 w-full"><canvas id="statusChart"></canvas></div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Top 5 Asal Kampus</h3>
+                <div class="relative h-64 w-full flex justify-center"><canvas id="kampusChart"></canvas></div>
+            </div>
+        </div>
+
+        
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-6">
+
+            
+            <form method="GET" action="http://127.0.0.1:8000" id="searchForm" class="mb-6 grid grid-cols-1 md:grid-cols-6 gap-4">
+                <input type="hidden" name="scrollTo" value="information">
+
+                
+                <div class="md:col-span-2">
+                    <input type="text" name="search" value=""
+                        placeholder="Cari Nama / NIM / Kampus..."
+                        class="w-full border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none p-2.5 transition-all duration-200"
+                        onkeypress="if(event.key === 'Enter') { event.preventDefault(); submitFormAndStay(); }">
+                </div>
+
+                
+                <div class="custom-select-wrapper">
+                    <select name="filter_division" id="filter_division" class="hidden-select">
+                        <option value="">Semua Divisi</option>
+                                                    <option value="1" >
+                                Administrasi Perkantoran
+                            </option>
+                                                    <option value="2" >
+                                Pengembang Aplikasi
+                            </option>
+                                                    <option value="3" >
+                                Pelayanan Publik
+                            </option>
+                                                    <option value="4" >
+                                Manajemen Media Sosial
+                            </option>
+                                                    <option value="5" >
+                                Administrasi Keuangan
+                            </option>
+                                            </select>
+                    <div class="custom-select">
+                        <div class="custom-select-trigger">
+                            <span>Semua Divisi</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="custom-options">
+                            <div class="custom-option" data-value="">Semua Divisi</div>
+                                                            <div class="custom-option " data-value="1">
+                                    Administrasi Perkantoran
+                                </div>
+                                                            <div class="custom-option " data-value="2">
+                                    Pengembang Aplikasi
+                                </div>
+                                                            <div class="custom-option " data-value="3">
+                                    Pelayanan Publik
+                                </div>
+                                                            <div class="custom-option " data-value="4">
+                                    Manajemen Media Sosial
+                                </div>
+                                                            <div class="custom-option " data-value="5">
+                                    Administrasi Keuangan
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+
+                
+                <div class="custom-select-wrapper">
+                    <select name="filter_status" id="filter_status" class="hidden-select">
+                        <option value="">Semua Status</option>
+                        <option value="aktif" >Aktif</option>
+                        <option value="selesai" >Selesai</option>
+                    </select>
+                    <div class="custom-select">
+                        <div class="custom-select-trigger">
+                            <span>Semua Status</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="custom-options">
+                            <div class="custom-option" data-value="">Semua Status</div>
+                            <div class="custom-option " data-value="aktif">Aktif</div>
+                            <div class="custom-option " data-value="selesai">Selesai</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="custom-select-wrapper">
+                    <select name="sort" id="sort" class="hidden-select">
+                        <option value="date_newest" >Terbaru</option>
+                        <option value="date_oldest" >Terlama</option>
+                        <option value="name_asc" >Nama (A-Z)</option>
+                        <option value="name_desc" >Nama (Z-A)</option>
+                    </select>
+                    <div class="custom-select">
+                        <div class="custom-select-trigger">
+                            <span>
+                                 Terbaru
+                                                            </span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="custom-options">
+                            <div class="custom-option selected" data-value="date_newest">Terbaru</div>
+                            <div class="custom-option " data-value="date_oldest">Terlama</div>
+                            <div class="custom-option " data-value="name_asc">Nama (A-Z)</div>
+                            <div class="custom-option " data-value="name_desc">Nama (Z-A)</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <button type="button" onclick="submitFormAndStay()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium shadow-sm flex items-center justify-center gap-2 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Cari
+                </button>
+            </form>
+
+            <script>
+                // Custom dropdown functionality
+                document.addEventListener('DOMContentLoaded', function() {
+                    const customSelects = document.querySelectorAll('.custom-select');
+
+                    customSelects.forEach(select => {
+                        const trigger = select.querySelector('.custom-select-trigger');
+                        const options = select.querySelectorAll('.custom-option');
+                        const hiddenSelect = select.closest('.custom-select-wrapper').querySelector('.hidden-select');
+
+                        // Toggle dropdown
+                        trigger.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            // Close other dropdowns
+                            customSelects.forEach(s => {
+                                if (s !== select) s.classList.remove('open');
+                            });
+                            select.classList.toggle('open');
+                        });
+
+                        // Select option
+                        options.forEach(option => {
+                            option.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                const value = this.getAttribute('data-value');
+                                const text = this.textContent;
+
+                                // Update trigger text
+                                trigger.querySelector('span').textContent = text;
+
+                                // Update hidden select
+                                hiddenSelect.value = value;
+
+                                // Update selected class
+                                options.forEach(opt => opt.classList.remove('selected'));
+                                this.classList.add('selected');
+
+                                // Close dropdown
+                                select.classList.remove('open');
+                            });
+                        });
+                    });
+
+                    // Close dropdown when clicking outside
+                    document.addEventListener('click', function() {
+                        customSelects.forEach(select => {
+                            select.classList.remove('open');
+                        });
+                    });
+                });
+
+                function submitFormAndStay() {
+                    // Save current scroll position relative to information section
+                    const infoSection = document.getElementById('information');
+                    const currentScrollPos = window.pageYOffset;
+                    const infoSectionTop = infoSection ? infoSection.offsetTop : 0;
+                    const relativeScroll = currentScrollPos - infoSectionTop;
+
+                    // Store in sessionStorage
+                    sessionStorage.setItem('keepScrollPosition', relativeScroll);
+
+                    // Submit form
+                    document.getElementById('searchForm').submit();
+                }
+
+                // Restore scroll position after page load
+                document.addEventListener('DOMContentLoaded', function() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const savedScroll = sessionStorage.getItem('keepScrollPosition');
+
+                    if (savedScroll !== null && urlParams.has('scrollTo')) {
+                        const infoSection = document.getElementById('information');
+                        if (infoSection) {
+                            // Scroll to information section + saved relative position
+                            const targetScroll = infoSection.offsetTop + parseInt(savedScroll);
+                            window.scrollTo({ top: targetScroll, behavior: 'instant' });
+                        }
+                        // Clear the saved position
+                        sessionStorage.removeItem('keepScrollPosition');
+                    }
+                });
+            </script>
+
+            
+            <div class="overflow-x-auto">
+                <table class="w-full whitespace-nowrap">
+                    <thead>
+                        <tr class="bg-gray-50 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                            
+                            <th class="px-6 py-4 text-center">Nama & NIM</th>
+                            <th class="px-6 py-4 text-center">Asal Kampus</th>
+                            <th class="px-6 py-4 text-center">Divisi</th>
+                            <th class="px-6 py-4 text-center">Periode</th>
+                            <th class="px-6 py-4 text-center">Status</th>
+                            <th class="px-6 py-4 text-center">Aksi</th> 
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        A
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Ahmad Fauzi</div>
+                                        <div class="text-xs text-gray-500">2141720003</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Universitas Negeri Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Pelayanan Publik
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                01 Feb 2025 - <br>
+                                30 Apr 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-green-100 text-green-800 border-green-200">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Ahmad Fauzi"
+                                    data-nim="2141720003"
+                                    data-kampus="Universitas Negeri Malang"
+                                    data-fakultas="Fakultas Ilmu Sosial"
+                                    data-prodi="Administrasi Publik"
+                                    data-divisi="Pelayanan Publik"
+                                    data-status="Aktif"
+                                    data-status-raw="aktif"
+                                    data-mulai="01 Feb 2025"
+                                    data-akhir="30 Apr 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        D
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Dewi Lestari</div>
+                                        <div class="text-xs text-gray-500">2141720004</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Universitas Muhammadiyah Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Administrasi Perkantoran
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                15 Jan 2025 - <br>
+                                15 Mar 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-green-100 text-green-800 border-green-200">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Dewi Lestari"
+                                    data-nim="2141720004"
+                                    data-kampus="Universitas Muhammadiyah Malang"
+                                    data-fakultas="Fakultas Ekonomi dan Bisnis"
+                                    data-prodi="Manajemen"
+                                    data-divisi="Administrasi Perkantoran"
+                                    data-status="Aktif"
+                                    data-status-raw="aktif"
+                                    data-mulai="15 Jan 2025"
+                                    data-akhir="15 Mar 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        R
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Rina Wati</div>
+                                        <div class="text-xs text-gray-500">2141720005</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Universitas Islam Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Manajemen Media Sosial
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                01 Dec 2024 - <br>
+                                28 Feb 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-blue-100 text-blue-800 border-blue-200">
+                                    Selesai
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Rina Wati"
+                                    data-nim="2141720005"
+                                    data-kampus="Universitas Islam Malang"
+                                    data-fakultas="Fakultas Komunikasi"
+                                    data-prodi="Ilmu Komunikasi"
+                                    data-divisi="Manajemen Media Sosial"
+                                    data-status="Selesai"
+                                    data-status-raw="selesai"
+                                    data-mulai="01 Dec 2024"
+                                    data-akhir="28 Feb 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        A
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Andi Wijaya</div>
+                                        <div class="text-xs text-gray-500">2141720006</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Institut Teknologi Nasional Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Pengembang Aplikasi
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                10 Feb 2025 - <br>
+                                10 May 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-green-100 text-green-800 border-green-200">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Andi Wijaya"
+                                    data-nim="2141720006"
+                                    data-kampus="Institut Teknologi Nasional Malang"
+                                    data-fakultas="Fakultas Teknologi Industri"
+                                    data-prodi="Sistem Informasi"
+                                    data-divisi="Pengembang Aplikasi"
+                                    data-status="Aktif"
+                                    data-status-raw="aktif"
+                                    data-mulai="10 Feb 2025"
+                                    data-akhir="10 May 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        M
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Maya Sari</div>
+                                        <div class="text-xs text-gray-500">2141720007</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Politeknik Negeri Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Administrasi Keuangan
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                20 Jan 2025 - <br>
+                                20 Mar 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-green-100 text-green-800 border-green-200">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Maya Sari"
+                                    data-nim="2141720007"
+                                    data-kampus="Politeknik Negeri Malang"
+                                    data-fakultas="Akuntansi"
+                                    data-prodi="Akuntansi Manajemen"
+                                    data-divisi="Administrasi Keuangan"
+                                    data-status="Aktif"
+                                    data-status-raw="aktif"
+                                    data-mulai="20 Jan 2025"
+                                    data-akhir="20 Mar 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        B
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Budi Santoso</div>
+                                        <div class="text-xs text-gray-500">2141720001</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Universitas Brawijaya</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Administrasi Perkantoran
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                15 Nov 2024 - <br>
+                                15 Jan 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-blue-100 text-blue-800 border-blue-200">
+                                    Selesai
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Budi Santoso"
+                                    data-nim="2141720001"
+                                    data-kampus="Universitas Brawijaya"
+                                    data-fakultas="Fakultas Ilmu Administrasi"
+                                    data-prodi="Administrasi Bisnis"
+                                    data-divisi="Administrasi Perkantoran"
+                                    data-status="Selesai"
+                                    data-status-raw="selesai"
+                                    data-mulai="15 Nov 2024"
+                                    data-akhir="15 Jan 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            
+
+                            
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">
+                                        S
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Siti Nurhaliza</div>
+                                        <div class="text-xs text-gray-500">2141720002</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">Politeknik Negeri Malang</td>
+
+                            <td class="px-6 py-4 text-sm text-gray-700">
+                                Pengembang Aplikasi
+                            </td>
+
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                10 Jan 2025 - <br>
+                                10 Apr 2025
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                                                <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full border bg-green-100 text-green-800 border-green-200">
+                                    Aktif
+                                </span>
+                            </td>
+
+                            
+                            <td class="px-6 py-4 text-center">
+                                <button onclick="openModal(this)"
+                                    data-nama="Siti Nurhaliza"
+                                    data-nim="2141720002"
+                                    data-kampus="Politeknik Negeri Malang"
+                                    data-fakultas="Teknologi Informasi"
+                                    data-prodi="Teknik Informatika"
+                                    data-divisi="Pengembang Aplikasi"
+                                    data-status="Aktif"
+                                    data-status-raw="aktif"
+                                    data-mulai="10 Jan 2025"
+                                    data-akhir="10 Apr 2025"
+
+                                    
+                                    data-surat-balasan=""
+                                    data-surat-pengembalian=""
+                                    data-sertifikat=""
+
+                                    class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md text-xs font-medium shadow-sm transition-all cursor-pointer">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                                            </tbody>
+                </table>
+            </div>
+
+            
+            <div class="mt-6">
+                
+            </div>
+
+        </div>
+
+        
+        <div id="internModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 backdrop-blur-lg transition-opacity" onclick="closeModal()"></div>
+
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+
+                    
+                    <div class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] px-6 py-4 flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-white" id="modal-nama">Nama Mahasiswa</h3>
+                        <button onclick="closeModal()" class="text-white hover:text-gray-200 cursor-pointer">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    
+                    <div class="px-6 py-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Informasi Akademik</h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-xs text-gray-500">NIM</p>
+                                        <p class="font-medium text-gray-900" id="modal-nim">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Asal Kampus</p>
+                                        <p class="font-medium text-gray-900" id="modal-kampus">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Fakultas / Prodi</p>
+                                        <p class="font-medium text-gray-900"><span id="modal-fakultas"></span> - <span id="modal-prodi"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Detail Magang</h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-xs text-gray-500">Divisi</p>
+                                        <p class="font-medium text-blue-600" id="modal-divisi">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Periode</p>
+                                        <p class="font-medium text-gray-900"><span id="modal-mulai"></span> s/d <span id="modal-akhir"></span></p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-500">Status</p>
+                                        <span id="modal-status" class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600">
+                                            -
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="mt-8 border-t pt-6">
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4 text-center">Berkas Kelengkapan</h4>
+                            <div class="flex flex-wrap justify-center gap-4" id="modal-documents">
+
+                                <a id="btn-balasan" href="#" target="_blank" class="hidden flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-100 border border-blue-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    Surat Balasan
+                                </a>
+
+                                <a id="btn-pengembalian" href="#" target="_blank" class="hidden flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-lg hover:bg-green-100 border border-green-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Surat Pengembalian
+                                </a>
+                                <span id="msg-pengembalian" class="hidden px-3 py-2 rounded-lg bg-gray-100 text-gray-400 border border-gray-200 text-xs italic">
+                                    Surat Pengembalian: Belum tersedia
+                                </span>
+
+                                <a id="btn-sertifikat" href="#" target="_blank" class="hidden flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-lg hover:bg-amber-100 border border-amber-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                                    Sertifikat Magang
+                                </a>
+                                <span id="msg-sertifikat" class="hidden px-3 py-2 rounded-lg bg-gray-100 text-gray-400 border border-gray-200 text-xs italic">
+                                    Sertifikat: Belum tersedia
+                                </span>
+
+                                <p id="no-docs-msg" class="text-sm text-gray-500 italic hidden">Tidak ada dokumen yang dapat ditampilkan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // ==========================================
+    // BAGIAN 1: LOGIKA CHART (GRAFIK)
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // --- 1. CONFIG STATUS CHART (BAR) ---
+        // --- 1. CONFIG STATUS CHART (GRAFIK TAHUNAN) ---
+        const ctxStatus = document.getElementById('statusChart').getContext('2d');
+        new Chart(ctxStatus, {
+            type: 'bar',
+            data: {
+                // Label Sumbu X adalah Tahun-tahun
+                labels: [2024,2025],
+                datasets: [
+                    {
+                        label: 'Peserta Aktif',
+                        data: [0,5],
+                        backgroundColor: '#22C55E', // Hijau
+                        borderRadius: 4,
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Peserta Selesai',
+                        data: [2,0],
+                        backgroundColor: '#3B82F6', // Biru
+                        borderRadius: 4,
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true, // Munculkan legenda biar tau mana aktif mana selesai
+                        position: 'top',
+                        labels: { usePointStyle: true, boxWidth: 8 }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { borderDash: [2, 4], color: '#E5E7EB' }, // Garis putus-putus tipis
+                        title: { display: true, text: 'Jumlah Mahasiswa' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        title: { display: true, text: 'Tahun Periode' }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                }
+            }
+        });
+
+        // --- 2. CONFIG KAMPUS CHART (DOUGHNUT) ---
+        const ctxKampus = document.getElementById('kampusChart').getContext('2d');
+        new Chart(ctxKampus, {
+            type: 'doughnut',
+            data: {
+                labels: ["Politeknik Negeri Malang","Universitas Brawijaya","Universitas Negeri Malang","Universitas Muhammadiyah Malang","Universitas Islam Malang"],
+                datasets: [{
+                    data: [2,1,1,1,1],
+                    backgroundColor: ['#F59E0B', '#10B981', '#3B82F6', '#6366F1', '#EC4899'],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 10 } }
+                }
+            }
+        });
+    });
+
+    // ==========================================
+    // BAGIAN 2: LOGIKA MODAL (POP-UP)
+    // (Ditaruh di luar event listener agar bisa dipanggil onclick)
+    // ==========================================
+
+    function openModal(button) {
+        // 1. Ambil Data dari Atribut Tombol
+        const data = button.dataset;
+
+        // 2. Isi Teks ke dalam Modal
+        document.getElementById('modal-nama').textContent = data.nama;
+        document.getElementById('modal-nim').textContent = data.nim;
+        document.getElementById('modal-kampus').textContent = data.kampus;
+        document.getElementById('modal-fakultas').textContent = data.fakultas;
+        document.getElementById('modal-prodi').textContent = data.prodi;
+        document.getElementById('modal-divisi').textContent = data.divisi;
+        document.getElementById('modal-mulai').textContent = data.mulai;
+        document.getElementById('modal-akhir').textContent = data.akhir;
+        // document.getElementById('modal-status').textContent = data.status;
+        // --- 3. LOGIKA WARNA STATUS (UPDATE DISINI) ---
+        const statusEl = document.getElementById('modal-status');
+        statusEl.textContent = data.status; // Teks (Misal: Aktif)
+
+        // Reset class lama dulu biar tidak numpuk
+        statusEl.className = 'inline-flex items-center rounded-md px-2 py-1 text-xs font-medium border';
+
+        // Tambahkan warna sesuai status raw
+        switch(data.statusRaw) { // Mengambil dari data-status-raw
+            case 'aktif':
+                statusEl.classList.add('bg-green-100', 'text-green-800', 'border-green-200');
+                break;
+            case 'selesai':
+                statusEl.classList.add('bg-blue-100', 'text-blue-800', 'border-blue-200');
+                break;
+            case 'ditolak':
+                statusEl.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                break;
+            default: // pending atau lainnya
+                statusEl.classList.add('bg-gray-100', 'text-gray-800', 'border-gray-200');
+        }
+
+        // 3. LOGIKA TOMBOL BERKAS
+        const isSelesai = data.statusRaw === 'selesai';
+
+        // A. Surat Balasan (Selalu muncul jika ada file)
+        setupDocButton('btn-balasan', data.suratBalasan);
+
+        // B. Surat Pengembalian (Hanya muncul jika selesai, jika tidak tampilkan pesan)
+        setupRestrictedDoc('btn-pengembalian', 'msg-pengembalian', data.suratPengembalian, isSelesai);
+
+        // C. Sertifikat (Hanya muncul jika selesai, jika tidak tampilkan pesan)
+        setupRestrictedDoc('btn-sertifikat', 'msg-sertifikat', data.sertifikat, isSelesai);
+
+        // 4. Cek Jika Kosong Semua (Opsional)
+        // Kalau semua tombol hidden dan pesan hidden, tampilkan pesan 'tidak ada dokumen'
+        const hasBalasan = data.suratBalasan && data.suratBalasan !== '';
+        // Kita anggap jika status tidak selesai, pesan 'belum tersedia' itu dianggap konten, jadi no-docs-msg bisa disembunyikan
+        if (!hasBalasan && isSelesai && (!data.suratPengembalian) && (!data.sertifikat)) {
+             document.getElementById('no-docs-msg').classList.remove('hidden');
+        } else {
+             document.getElementById('no-docs-msg').classList.add('hidden');
+        }
+
+        // Tampilkan Modal
+        document.getElementById('internModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('internModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Fungsi Helper 1: Tombol Biasa (Show/Hide based on URL)
+    function setupDocButton(elementId, url) {
+        const btn = document.getElementById(elementId);
+        if (url && url.trim() !== "") {
+            btn.href = url;
+            btn.classList.remove('hidden');
+            btn.classList.add('flex');
+        } else {
+            btn.classList.add('hidden');
+            btn.classList.remove('flex');
+        }
+    }
+
+    // Fungsi Helper 2: Tombol Terbatas (Show Button IF selesai & ada file, ELSE Show Message)
+    function setupRestrictedDoc(btnId, msgId, url, isSelesai) {
+        const btn = document.getElementById(btnId);
+        const msg = document.getElementById(msgId);
+
+        if (isSelesai) {
+            // Status Selesai: Tampilkan tombol jika ada file
+            msg.classList.add('hidden'); // Sembunyikan pesan "belum tersedia"
+
+            if (url && url.trim() !== "") {
+                btn.href = url;
+                btn.classList.remove('hidden');
+                btn.classList.add('flex');
+            } else {
+                // Selesai tapi file belum diupload admin -> Hide button
+                btn.classList.add('hidden');
+                btn.classList.remove('flex');
+            }
+        } else {
+            // Status Belum Selesai (Aktif/Pending): Sembunyikan tombol, Tampilkan pesan
+            btn.classList.add('hidden');
+            btn.classList.remove('flex');
+            msg.classList.remove('hidden'); // Munculkan pesan "Belum tersedia"
+        }
+    }
+
+    // Close on ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") closeModal();
+    });
+</script>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section id="testimonial" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+                Testimoni
+                <span class="bg-gradient-to-r from-[#1A8EC4] to-[#0D6EAD] bg-clip-text text-transparent">
+                    Mahasiswa
+                </span>
+            </h2>
+            <p class="text-md text-gray-600 max-w-3xl mx-auto">
+                Apa kata mereka yang telah melakukan magang di Bakorwil III Malang
+            </p>
+        </div>
+
+        
+        <div class="swiper mySwiper pb-12 px-4">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            D
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Dinara Aulia Safina">
+                                            Dinara Aulia Safina
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Universitas Brawijaya</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Pengalaman magang di Bakorwil III Malang sangat luar biasa! Saya belajar banyak tentang administrasi perkantoran dan mendapat bimbingan yang sangat baik dari para mentor."
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Dinara Aulia Safina', 'Universitas Brawijaya', '5', `Pengalaman magang di Bakorwil III Malang sangat luar biasa! Saya belajar banyak tentang administrasi perkantoran dan mendapat bimbingan yang sangat baik dari para mentor.`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            A
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Ahmad Rizki Pratama">
+                                            Ahmad Rizki Pratama
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Politeknik Negeri Malang</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Magang di divisi pengembangan aplikasi memberikan saya kesempatan untuk mengaplikasikan ilmu yang dipelajari di kampus. Tim yang supportif dan proyek yang menantang!"
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Ahmad Rizki Pratama', 'Politeknik Negeri Malang', '5', `Magang di divisi pengembangan aplikasi memberikan saya kesempatan untuk mengaplikasikan ilmu yang dipelajari di kampus. Tim yang supportif dan proyek yang menantang!`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            S
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Siti Nurhaliza">
+                                            Siti Nurhaliza
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Universitas Negeri Malang</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Pengalaman yang sangat berharga! Saya belajar tentang manajemen media sosial dan public relations. Lingkungan kerja yang profesional namun tetap ramah."
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Siti Nurhaliza', 'Universitas Negeri Malang', '5', `Pengalaman yang sangat berharga! Saya belajar tentang manajemen media sosial dan public relations. Lingkungan kerja yang profesional namun tetap ramah.`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            B
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Budi Santoso">
+                                            Budi Santoso
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Universitas Muhammadiyah Malang</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-gray-300"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Magang di pelayanan publik membuka wawasan saya tentang bagaimana pemerintah melayani masyarakat. Banyak pembelajaran praktis yang tidak didapat di bangku kuliah."
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Budi Santoso', 'Universitas Muhammadiyah Malang', '4', `Magang di pelayanan publik membuka wawasan saya tentang bagaimana pemerintah melayani masyarakat. Banyak pembelajaran praktis yang tidak didapat di bangku kuliah.`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            M
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Maya Putri Andini">
+                                            Maya Putri Andini
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Politeknik Negeri Malang</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Divisi administrasi keuangan memberikan pengalaman nyata dalam pengelolaan keuangan pemerintah. Mentor yang sabar dan sistem yang terstruktur dengan baik."
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Maya Putri Andini', 'Politeknik Negeri Malang', '5', `Divisi administrasi keuangan memberikan pengalaman nyata dalam pengelolaan keuangan pemerintah. Mentor yang sabar dan sistem yang terstruktur dengan baik.`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                                    <div class="swiper-slide h-auto pt-4 pb-8 px-2">
+                        
+                        
+                        <div class="h-full bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-blue-100 flex flex-col justify-between">
+
+                            
+                            <div>
+                                
+                                <div class="flex items-center mb-6">
+                                                                            <div class="w-16 h-16 bg-gradient-to-br from-[#1A8EC4] to-[#0D6EAD] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm shrink-0">
+                                            R
+                                        </div>
+                                    
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-gray-900 text-lg line-clamp-1" title="Rian Firmansyah">
+                                            Rian Firmansyah
+                                        </h4>
+                                        <p class="text-sm text-gray-600 line-clamp-1">Institut Teknologi Nasional Malang</p>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="flex mb-4">
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                            <svg class="w-5 h-5 text-yellow-400"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                                                    </div>
+
+                                
+                                <div class="mb-4">
+                                    <p class="text-gray-700 italic leading-relaxed line-clamp-3">
+                                        "Proyek-proyek yang dikerjakan sangat relevan dengan perkembangan teknologi terkini. Saya merasa skill programming saya meningkat pesat selama magang di sini."
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="mt-auto pt-4 border-t border-blue-100">
+                                                                    <button
+                                        onclick="openReviewModal('Rian Firmansyah', 'Institut Teknologi Nasional Malang', '5', `Proyek-proyek yang dikerjakan sangat relevan dengan perkembangan teknologi terkini. Saya merasa skill programming saya meningkat pesat selama magang di sini.`)"
+                                        class="text-[#0D6EAD] text-sm font-semibold hover:text-[#1A8EC4] transition-colors flex items-center gap-1 cursor-pointer">
+                                        Baca Selengkapnya
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                                            </div>
+
+                        </div>
+                    </div>
+                            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<div id="reviewModalContainer" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-opacity-50 transition-opacity backdrop-blur-sm" onclick="closeReviewModal()"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+
+            <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg border border-gray-100">
+
+                <div class="bg-gradient-to-r from-blue-50 to-white px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                    <div>
+                        
+                        <h3 class="text-lg font-bold leading-6 text-gray-900" id="review-modal-name">Nama Reviewer</h3>
+                        <p class="text-sm text-[#0D6EAD]" id="review-modal-kampus">Asal Kampus</p>
+                    </div>
+                    
+                    <button onclick="closeReviewModal()" class="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="px-6 py-6">
+                    <div id="review-modal-stars" class="flex mb-4 text-yellow-400"></div>
+                    <div class="mt-2">
+                        <p class="text-gray-600 text-base leading-relaxed italic" id="review-modal-content">
+                            </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 px-6 py-3 sm:flex sm:flex-row-reverse">
+                    <button type="button" onclick="closeReviewModal()" class="inline-flex w-full justify-center rounded-lg bg-[#0D6EAD] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#1A8EC4] sm:w-auto transition-colors cursor-pointer">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Swiper Config (Tidak berubah)
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 24 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
+        },
+    });
+
+    // === PERBAIKAN DI SINI ===
+    // Nama variabel & ID elemen dibedakan dari intern.blade.php
+    const reviewModal = document.getElementById('reviewModalContainer');
+    const reviewName = document.getElementById('review-modal-name');
+    const reviewKampus = document.getElementById('review-modal-kampus');
+    const reviewContent = document.getElementById('review-modal-content');
+    const reviewStars = document.getElementById('review-modal-stars');
+
+    // Fungsi OPEN khusus review
+    function openReviewModal(name, kampus, rating, content) {
+        reviewName.textContent = name;
+        reviewKampus.textContent = kampus;
+        reviewContent.textContent = '"' + content + '"';
+
+        let starsHtml = '';
+        for(let i=1; i<=5; i++) {
+            if(i <= rating) {
+                starsHtml += `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>`;
+            } else {
+                starsHtml += `<svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>`;
+            }
+        }
+        reviewStars.innerHTML = starsHtml;
+
+        reviewModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Fungsi CLOSE khusus review
+    function closeReviewModal() {
+        reviewModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Event Listener Escape Key khusus review
+    document.addEventListener('keydown', function(event) {
+        if(event.key === "Escape" && !reviewModal.classList.contains('hidden')) {
+            closeReviewModal();
+        }
+    });
+</script>
+
+    
+    <style>
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes float-delayed {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float-delayed 8s ease-in-out infinite;
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+            </div>
+        </main>
+
+        <footer
+    class="relative bg-gradient-to-br from-[#0D4A6B] via-[#1A8EC4] to-[#0D6EAD] text-white overflow-hidden"
+>
+    
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-10 right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+        <div
+            class="absolute bottom-20 left-10 w-80 h-80 bg-[#FFC107]/10 rounded-full blur-3xl"
+        ></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    
+                    <div class="flex-shrink-0">
+                        <img
+                            src="http://127.0.0.1:8000/logo-prov-jatim.png"
+                            alt="Logo Provinsi Jawa Timur"
+                            class="w-16 h-16 lg:w-20 lg:h-20 object-contain drop-shadow-lg"
+                        />
+                    </div>
+
+                    
+                    <div class="flex-1">
+                        <a href="/">
+                            <h3
+                                class="text-2xl lg:text-3xl font-extrabold mb-1"
+                                style="font-family: 'Poppins', sans-serif"
+                            >
+                                <span
+                                    class="bg-gradient-to-r from-[#FFC107] to-[#5CB3E0] bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer"
+                                >
+                                    SIMAGANG
+                                </span>
+                            </h3>
+                            <p
+                                class="text-sm lg:text-base font-semibold text-blue-100 leading-tight"
+                            >
+                                BAKORWIL III MALANG PROV JATIM
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="text-sm lg:text-base text-blue-100 leading-relaxed">
+                    Sistem Informasi Magang Badan Koordinasi Wilayah III Malang, Provinsi Jawa Timur
+                </p>
+            </div>
+
+            
+            <div class="space-y-4">
+                <h4 class="text-xl lg:text-2xl font-bold mb-4 flex items-center">
+                    CONTACT
+                </h4>
+
+                
+                <div
+                    class="flex items-start space-x-3 group hover:translate-x-1 transition-transform duration-300"
+                >
+                    <div class="flex-shrink-0 mt-1">
+                        <svg class="w-5 h-5 text-[#FFC107]" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm lg:text-base text-blue-100 leading-relaxed">
+                            Jl. Simpang Ijen No.2, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa
+                            Timur 65119
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="flex items-center space-x-3 group hover:translate-x-1 transition-transform duration-300"
+                >
+                    <div class="flex-shrink-0">
+                        <svg class="w-5 h-5 text-[#FFC107]" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                            />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </div>
+                    <a
+                        href="mailto:bakorwilmalang@jatimprov.go.id"
+                        class="text-sm lg:text-base text-blue-100 hover:text-[#FFC107] transition-colors duration-300"
+                    >
+                        bakorwilmalang@jatimprov.go.id
+                    </a>
+                </div>
+
+                
+                <div
+                    class="flex items-center space-x-3 group hover:translate-x-1 transition-transform duration-300"
+                >
+                    <div class="flex-shrink-0">
+                        <svg class="w-5 h-5 text-[#FFC107]" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                            />
+                        </svg>
+                    </div>
+                    <a
+                        href="tel:0341555366"
+                        class="text-sm lg:text-base text-blue-100 hover:text-[#FFC107] transition-colors duration-300"
+                    >
+                        (0341) 555-366
+                    </a>
+                </div>
+
+                
+                <div class="pt-4">
+                    <div class="flex items-center space-x-3">
+                        
+                        <a
+                            href="https://www.youtube.com/@bakorwiliiimalang5279"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transform transition-all duration-300 group"
+                        >
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+
+                        
+                        <a
+                            href="https://x.com/bakorwil3malang"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transform transition-all duration-300 group"
+                        >
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+
+                        
+                        <a
+                            href="https://www.facebook.com/bakorwilmalangprovjatim"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transform transition-all duration-300 group"
+                        >
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+
+                        
+                        <a
+                            href="https://www.instagram.com/bakorwilmalang"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-[#FFC107] hover:scale-110 transform transition-all duration-300 group"
+                        >
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="space-y-4">
+                <h4 class="text-xl lg:text-2xl font-bold mb-4 flex items-center">
+                    LOCATION
+                </h4>
+
+                
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 hover:border-[#FFC107]/50 transition-all duration-300 group"
+                >
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-50">
+                        <iframe
+                            src="https://www.google.com/maps?q=Badan+Koordinasi+Wilayah+Pemerintahan+dan+Pembangunan+Jawa+Timur+III+Malang,Jl.+Simpang+Ijen+No.2,+Oro-oro+Dowo,+Kec.+Klojen,+Kota+Malang,+Jawa+Timur+65119&output=embed&z=17"
+                            width="100%"
+                            height="100%"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full"
+                        ></iframe>
+                    </div>
+
+                    
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#1A8EC4]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    ></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="mt-12 pt-8 border-t border-white/20">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+            >
+                <p class="text-sm text-blue-100 text-center md:text-left">
+                    &copy; 2025 SIMAGANG - Badan Koordinasi Wilayah III Malang. All
+                    rights reserved.
+                </p>
+
+                <div class="flex items-center space-x-6 text-sm text-blue-100">
+                    <a href="#" class="hover:text-[#FFC107] transition-colors duration-300">
+                        Privacy Policy
+                    </a>
+                    <span class="text-white/30">|</span>
+                    <a href="#" class="hover:text-[#FFC107] transition-colors duration-300">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="absolute top-0 left-0 right-0 overflow-hidden leading-none">
+        <svg
+            class="relative block w-full h-12"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+        >
+            <path
+                fill="#ffff"
+                fill-opacity="1"
+                d="M0,50 C240,100 480,0 720,50 C960,100 1200,0 1440,50 L1440,0 L0,0 Z"
+            ></path>
+        </svg>
+    </div>
+</footer>
+    </body>
+</html>

@@ -1,0 +1,533 @@
+.building-illustration {
+    position: relative;
+    width: 100vw;
+    height: 689px;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 2 rem;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+/* Sky Background with Gradient */
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        #87CEEB 0%,
+        #A8D8F0 30%,
+        #C8E6F5 60%,
+        #E0F4FA 100%
+    );
+    overflow: hidden;
+}
+
+/* Animated Clouds */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.85;
+    animation: float-cloud 30s infinite linear;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 100px;
+}
+
+.cloud-1 {
+    width: 140px;
+    height: 50px;
+    top: 12%;
+    left: -140px;
+    animation-delay: 0s;
+}
+
+.cloud-1::before {
+    width: 80px;
+    height: 60px;
+    top: -30px;
+    left: 20px;
+}
+
+.cloud-1::after {
+    width: 90px;
+    height: 55px;
+    top: -25px;
+    right: 20px;
+}
+
+.cloud-2 {
+    width: 160px;
+    height: 55px;
+    top: 25%;
+    left: -160px;
+    animation-delay: 12s;
+}
+
+.cloud-2::before {
+    width: 90px;
+    height: 65px;
+    top: -32px;
+    left: 25px;
+}
+
+.cloud-2::after {
+    width: 100px;
+    height: 60px;
+    top: -28px;
+    right: 25px;
+}
+
+.cloud-3 {
+    width: 120px;
+    height: 45px;
+    top: 8%;
+    left: -120px;
+    animation-delay: 20s;
+}
+
+.cloud-3::before {
+    width: 70px;
+    height: 55px;
+    top: -28px;
+    left: 18px;
+}
+
+.cloud-3::after {
+    width: 80px;
+    height: 50px;
+    top: -24px;
+    right: 18px;
+}
+
+/* Additional clouds for fullness */
+.cloud-4 {
+    width: 130px;
+    height: 48px;
+    top: 18%;
+    left: -130px;
+    animation-delay: 6s;
+}
+
+.cloud-4::before {
+    width: 75px;
+    height: 58px;
+    top: -29px;
+    left: 22px;
+}
+
+.cloud-4::after {
+    width: 85px;
+    height: 52px;
+    top: -26px;
+    right: 22px;
+}
+
+@keyframes float-cloud {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: calc(100% + 200px);
+    }
+}
+
+/* Background Buildings Layer (for depth) */
+.background-buildings {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 0 10px;
+    opacity: 0.4;
+    filter: blur(2px);
+    z-index: 5;
+}
+
+.bg-building {
+    background: linear-gradient(to bottom, #1A4A6F 0%, #0F2E47 100%);
+    border-radius: 3px 3px 0 0;
+    animation: building-rise 2s ease-out;
+}
+
+.bg-building-1 { width: 90px; height: 40%; animation-delay: 0.05s; }
+.bg-building-2 { width: 110px; height: 50%; animation-delay: 0.1s; }
+.bg-building-3 { width: 80px; height: 35%; animation-delay: 0.15s; }
+.bg-building-4 { width: 100px; height: 45%; animation-delay: 0.2s; }
+.bg-building-5 { width: 95px; height: 42%; animation-delay: 0.25s; }
+.bg-building-6 { width: 105px; height: 48%; animation-delay: 0.3s; }
+.bg-building-7 { width: 85px; height: 38%; animation-delay: 0.35s; }
+.bg-building-8 { width: 115px; height: 52%; animation-delay: 0.4s; }
+.bg-building-9 { width: 90px; height: 40%; animation-delay: 0.45s; }
+.bg-building-10 { width: 100px; height: 46%; animation-delay: 0.5s; }
+
+/* City Skyline Container (Front Layer) */
+.city-skyline {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 0 30px;
+    z-index: 10;
+}
+
+/* Building Styles */
+.building {
+    position: relative;
+    background: linear-gradient(to bottom, #2C5F8D 0%, #1E4A6F 100%);
+    border-radius: 5px 5px 0 0;
+    animation: building-rise 1.5s ease-out;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes building-rise {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Individual Building Sizes (Increased) */
+.building-1 {
+    width: 120px;
+    height: 45%;
+    animation-delay: 0.1s;
+}
+
+.building-2 {
+    width: 150px;
+    height: 55%;
+    animation-delay: 0.2s;
+}
+
+.building-3 {
+    width: 110px;
+    height: 42%;
+    animation-delay: 0.3s;
+}
+
+/* Main Building (Center - Tallest) */
+.building-main {
+    width: 400px;
+    height: 75%;
+    background: linear-gradient(to bottom, #1E3A5F 0%, #152942 100%);
+    animation-delay: 0.4s;
+    position: relative;
+    border-radius: 0;
+}
+
+/* Main Building Traditional Roof (Indonesian Style) */
+.building-main::before {
+    content: '';
+    position: absolute;
+    top: -65px;
+    left: -35px;
+    right: -35px;
+    height: 70px;
+    background: linear-gradient(to bottom, #D2691E 0%, #A0522D 50%, #8B4513 100%);
+    clip-path: polygon(
+        50% 0%,
+        45% 15%,
+        5% 40%,
+        0% 100%,
+        100% 100%,
+        95% 40%,
+        55% 15%
+    );
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Roof ridge decoration */
+.building-main::after {
+    content: '';
+    position: absolute;
+    top: -68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 30px;
+    background: linear-gradient(to bottom, #FFD700 0%, #DAA520 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Building Sign on Main Building */
+.building-sign {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 15px 40px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.building-sign-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 2.2vw, 20px);
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.5px;
+}
+
+.building-5 {
+    width: 130px;
+    height: 50%;
+    animation-delay: 0.5s;
+}
+
+.building-6 {
+    width: 155px;
+    height: 58%;
+    animation-delay: 0.6s;
+}
+
+.building-7 {
+    width: 115px;
+    height: 46%;
+    animation-delay: 0.7s;
+}
+
+.building-8 {
+    width: 140px;
+    height: 52%;
+    animation-delay: 0.8s;
+}
+
+/* Building Windows */
+.building-windows {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    right: 10%;
+    bottom: 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.building-main .building-windows {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    top: 22%;
+    left: 8%;
+    right: 8%;
+}
+
+.window {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    animation: window-blink 4s infinite ease-in-out;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.window:nth-child(odd) {
+    animation-delay: 0s;
+}
+
+.window:nth-child(even) {
+    animation-delay: 2s;
+}
+
+@keyframes window-blink {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.85;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* People/Characters at bottom */
+.people {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 10%;
+    z-index: 100;
+}
+
+.person {
+    position: relative;
+    animation: person-bounce 3s infinite ease-in-out;
+}
+
+.person:nth-child(1) { animation-delay: 0s; }
+.person:nth-child(2) { animation-delay: 1s; }
+.person:nth-child(3) { animation-delay: 2s; }
+
+@keyframes person-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.person-head {
+    width: 20px;
+    height: 20px;
+    background: #FFD1A4;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.person-body {
+    width: 28px;
+    height: 35px;
+    background: linear-gradient(to bottom, #1A8EC4 0%, #0D6EAD 100%);
+    margin: 3px auto 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.person-legs {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.person-leg {
+    width: 8px;
+    height: 100%;
+    background: #2C3E50;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Ground with Gradient to White */
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    background: linear-gradient(to bottom,
+        #5A9FBD 0%,
+        #7AB8D4 25%,
+        #A8D5E8 50%,
+        #C5E3F0 70%,
+        #E0EFF5 85%,
+        rgba(255, 255, 255, 0.98) 100%
+    );
+    z-index: 50;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .building-illustration {
+        height: 60vh;
+        min-height: 450px;
+    }
+
+    .city-skyline {
+        gap: 8px;
+        padding: 0 15px;
+    }
+
+    .building-main {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .building-illustration {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .city-skyline {
+        gap: 6px;
+        padding: 0 10px;
+    }
+
+    .building-1, .building-3, .building-7 {
+        width: 60px;
+    }
+
+    .building-2, .building-5, .building-8 {
+        width: 75px;
+    }
+
+    .building-6 {
+        width: 85px;
+    }
+
+    .building-main {
+        width: 120px;
+    }
+
+    .building-windows {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .building-illustration {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .city-skyline {
+        gap: 4px;
+        padding: 0 5px;
+    }
+
+    .building-1, .building-3, .building-7 {
+        width: 45px;
+    }
+
+    .building-2, .building-5, .building-8 {
+        width: 55px;
+    }
+
+    .building-6 {
+        width: 65px;
+    }
+
+    .building-main {
+        width: 90px;
+    }
+
+    .building-windows {
+        gap: 4px;
+    }
+
+    .building-sign {
+        padding: 6px 15px;
+    }
+}
