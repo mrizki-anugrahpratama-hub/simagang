@@ -1,59 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SIMAGANG (Sistem Informasi Manajemen Magang)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+SIMAGANG adalah platform berbasis Laravel yang dirancang khusus untuk mengelola seluruh proses administrasi magang di **Bakorwil III Malang**. Aplikasi ini mengintegrasikan formulir pendaftaran publik, manajemen kuota divisi otomatis, hingga panel admin berbasis **Filament** untuk monitoring data peserta secara *real-time*.
 
-## About Laravel
+## ✨ Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- 📝 **Multi-step Registration** - Formulir pendaftaran interaktif dengan validasi berkas (PDF & Image).
+- 🏢 **Division & Quota Management** - Pengaturan kuota otomatis per divisi yang berkurang saat peserta diterima.
+- 🔐 **Filament Admin Panel** - Manajemen data peserta magang (Pending, Aktif, Selesai, Ditolak) dengan antarmuka modern.
+- 📑 **Document Management** - Penyimpanan dan peninjauan berkas digital (CV, KTM, Proposal) secara terpusat.
+- 🛡️ **System Logs** - Pencatatan setiap aktivitas perubahan data (Create, Update, Delete) untuk audit.
+- 📱 **WhatsApp Integration** - Fitur konfirmasi pendaftaran langsung ke WhatsApp Admin (Pak Wildan).
+- ✍️ **Token-based Review** - Sistem ulasan alumni magang berbasis token unik (sekali pakai).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Prasyarat
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP >= 8.2
+- Composer
+- Node.js & npm
+- Database (MySQL / MariaDB / SQLite)
+- Ekstensi PHP: GD atau Imagick (untuk pemrosesan gambar)
 
-## Learning Laravel
+## 🚀 Instalasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+1. **Clone repository**
+   ```bash
+   git clone <repo-url-simagang>
+   cd simagang
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install dependensi PHP**
+   ```bash
+   composer install
+   ```
 
-## Laravel Sponsors
+3. **Install dependensi JavaScript**
+   ```bash
+   npm install
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. **Salin file environment**
+   ```bash
+   cp .env.example .env
+   ```
 
-### Premium Partners
+5. **Generate application key**
+   ```bash
+   php artisan key:generate
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+6. **Konfigurasi Database**
+   Edit file `.env` dan sesuaikan dengan database lokal Anda:
+   ```env
+   DB_CONNECTION=mysql
+   DB_DATABASE=simagang_db
+   DB_USERNAME=root
+   DB_PASSWORD=
+   
+   APP_URL=http://localhost:8000
+   ```
 
-## Contributing
+7. **Migrasi dan Seed Database**
+   ```bash
+   php artisan migrate --seed
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+8. **Link Storage (Sangat Penting)**
+   Pastikan folder storage terhubung agar berkas dan pasfoto bisa diakses oleh publik:
+   ```bash
+   php artisan storage:link
+   ```
 
-## Code of Conduct
+9. **Build assets frontend**
+   ```bash
+   npm run build
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📂 Konfigurasi Berkas (Storage)
 
-## Security Vulnerabilities
+Untuk memastikan dokumen pendaftaran (PDF) dan pasfoto tampil dengan benar:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Pastikan `APP_URL` di `.env` sesuai dengan URL akses aplikasi (misal: `http://localhost:8000`).
+- Pastikan folder `storage/app/public` memiliki izin akses (*write permission*).
+- Jika terjadi error **403 Forbidden**, periksa kembali *symbolic link* dan pastikan file tersimpan di disk `public`.
 
-## License
+## 🖥️ Menjalankan Aplikasi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Jalankan server pengembangan Laravel:
+```bash
+php artisan serve
+```
+Akses aplikasi melalui:
+- **Halaman Depan:** [http://localhost:8000](http://localhost:8000)
+- **Pendaftaran:** [http://localhost:8000/register](http://localhost:8000/register)
+- **Panel Admin:** [http://localhost:8000/admin](http://localhost:8000/admin)
+
+## 🧪 Testing & Logging
+
+Aplikasi ini mencatat setiap perubahan data penting di tabel `system_logs`. Untuk memantau aktivitas admin:
+1. Masuk ke Panel Admin Filament.
+2. Buka menu **System Logs**.
+3. Anda dapat melihat siapa, kapan, dan apa saja perubahan (data lama vs data baru) yang dilakukan.
+
+## 👥 Kontributor & Kontak
+
+- **Lead Developer:** [Nama Anda / Mahasiswa Magang]
+- **Supervisor:** Pak Wildan & Pak Agus (Bakorwil III Malang)
+- **Institusi:** State University of Surabaya (UNESA)
+
+---
+&copy; 2026 **Bakorwil III Malang**. All rights reserved.
