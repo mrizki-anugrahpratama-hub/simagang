@@ -4,17 +4,16 @@ SIMAGANG adalah platform berbasis Laravel yang dirancang khusus untuk mengelola 
 
 ## ✨ Fitur Utama
 
-- 📝 **Multi-step Registration** - Formulir pendaftaran interaktif dengan validasi berkas (PDF & Image).
+- 📝 **Multi-step Registration** - Formulir pendaftaran interaktif dengan validasi berkas (PDF & Gambar).
 - 🏢 **Division & Quota Management** - Pengaturan kuota otomatis per divisi yang berkurang saat peserta diterima.
-- 🔐 **Filament Admin Panel** - Manajemen data peserta magang (Pending, Aktif, Selesai, Ditolak) dengan antarmuka modern.
+- 🔐 **Filament Admin Panel** - Manajemen data peserta magang (Menunggu, Aktif, Selesai, Ditolak) dengan antarmuka modern.
 - 📑 **Document Management** - Penyimpanan dan peninjauan berkas digital (CV, KTM, Proposal) secara terpusat.
 - 🛡️ **System Logs** - Pencatatan setiap aktivitas perubahan data (Create, Update, Delete) untuk audit.
-- 📱 **WhatsApp Integration** - Fitur konfirmasi pendaftaran langsung ke WhatsApp Admin (Pak Wildan).
-- ✍️ **Token-based Review** - Sistem ulasan alumni magang berbasis token unik (sekali pakai).
+- ✍️ **Token-based Review** - Sistem ulasan purna magang berbasis token unik (sekali pakai).
 
 ## 🛠️ Prasyarat
 
-- PHP >= 8.2
+- PHP >= 8.4
 - Composer
 - Node.js & npm
 - Database (MySQL / MariaDB / SQLite)
@@ -59,18 +58,41 @@ SIMAGANG adalah platform berbasis Laravel yang dirancang khusus untuk mengelola 
    APP_URL=http://localhost:8000
    ```
 
-7. **Migrasi dan Seed Database**
+7. **Atur Driver Email di .env**
+   Buka file `.env` dan cari bagian MAIL_. 
+   Jika menggunakan Gmail Anda harus membuat App Password di pengaturan keamanan Akun Google agar aplikasi  
+   diizinkan mengirim email secara otomatis. Berikut adalah parameter yang harus diisi:
+   ```env
+   MAIL_MAILER=smtp
+   MAIL_HOST=smtp.gmail.com
+   MAIL_PORT=465
+   MAIL_USERNAME=email-resmi-bakorwil@gmail.com
+   MAIL_PASSWORD=app-password-anda
+   MAIL_ENCRYPTION=ssl
+   MAIL_FROM_ADDRESS="${MAIL_USERNAME}"
+   MAIL_FROM_NAME="SIMAGANG Bakorwil III Malang"
+   ```
+
+   Jika menggunakan Mailtrap berikut ini adalah parameter yang harus diisi:
+   ```env
+   MAIL_HOST=sandbox.smtp.mailtrap.io
+   MAIL_PORT=2525
+   MAIL_USERNAME=username-mailtrap
+   MAIL_PASSWORD=password-mailtrap
+   ```
+
+8. **Migrasi dan Seed Database**
    ```bash
    php artisan migrate --seed
    ```
 
-8. **Link Storage (Sangat Penting)**
+9. **Link Storage (Sangat Penting)**
    Pastikan folder storage terhubung agar berkas dan pasfoto bisa diakses oleh publik:
    ```bash
    php artisan storage:link
    ```
 
-9. **Build assets frontend**
+10. **Build assets frontend**
    ```bash
    npm run build
    ```
@@ -98,14 +120,13 @@ Akses aplikasi melalui:
 
 Aplikasi ini mencatat setiap perubahan data penting di tabel `system_logs`. Untuk memantau aktivitas admin:
 1. Masuk ke Panel Admin Filament.
-2. Buka menu **System Logs**.
+2. Buka menu **Riwayat Perubahan**.
 3. Anda dapat melihat siapa, kapan, dan apa saja perubahan (data lama vs data baru) yang dilakukan.
 
 ## 👥 Kontributor & Kontak
 
-- **Lead Developer:** [Nama Anda / Mahasiswa Magang]
-- **Supervisor:** Pak Wildan & Pak Agus (Bakorwil III Malang)
-- **Institusi:** State University of Surabaya (UNESA)
+- **Lead Developer:** M. Rizki Anugrah Pratama (UNESA)
+- **Supervisor:** M. Wildan Alauddin (Bakorwil III Malang)
 
 ---
 &copy; 2026 **Bakorwil III Malang**. All rights reserved.
