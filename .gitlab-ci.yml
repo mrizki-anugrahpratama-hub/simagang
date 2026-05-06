@@ -1,0 +1,122 @@
+# ==========================================
+# PIPELINE KEAMANAN SAST SIMAGANG (PRETTIFIED)
+# ==========================================
+
+stages:
+  - test          # Tahap SAST & Security Scans
+  - post-test     # Merapikan laporan
+  - build         # Membuat Image Docker
+  - dast          # Tahap Dynamic Scan Mendalam
+
+# Include template resmi GitLab
+include:
+  - template: Security/SAST.gitlab-ci.yml                 # Scan Kode Mentah
+  - template: Security/Secret-Detection.gitlab-ci.yml     # Scan Kebocoran Password
+  - template: Security/Dependency-Scanning.gitlab-ci.yml  # Scan Library Vendor
+  - template: Security/DAST.gitlab-ci.yml                 # Scan Aplikasi Berjalan
+
+variables:
+  # Abaikan folder vendor/library agar scan fokus pada kode buatan sendiri
+  SAST_EXCLUDED_PATHS: "vendor, node_modules, tests"
+  # Pastikan scan berjalan meskipun tidak ada file pendukung (opsional)
+  SECURE_LOG_LEVEL: "info"
+
+# --- 1. KONFIGURASI SAST & PRETTIFY ---
+# ---------------------------------------------------
+# FIX: Nonaktifkan job 'sast' induk yang bikin Failed
+# ---------------------------------------------------
+sast:
+  rules:
+    - when: never
+
+# ---------------------------------------------------
+# KONFIGURASI: Semgrep (Job yang berhasil sebelumnya)
+# ---------------------------------------------------
+semgrep-sast:
+  stage: test
+  artifacts:
+    reports:
+      sast: gl-sast-report.json
+    paths:
+      - gl-sast-report.json  # Simpan file asli untuk diproses job berikutnya
+    expire_in: 1 week
+
+# ---------------------------------------------------
+# JOB BARU: Merapikan JSON (Prettify)
+# ---------------------------------------------------
+prettify-sast-report:
+  stage: post-test
+  image: python:3.9-slim
+  script:
+    - |
+      if [ -f gl-sast-report.json ]; then
+        echo "Merapikan laporan JSON..."
+        python3 -m json.tool gl-sast-report.json > simagang-sast-pretty.json
+        echo "Berhasil! File simagang-sast-pretty.json telah dibuat."
+      else
+        echo "Error: gl-sast-report.json tidak ditemukan!"
+        exit 1
+      fi
+  artifacts:
+    paths:
+      - simagang-sast-pretty.json
+    expire_in: 1 week
+  dependencies:
+    - semgrep-sast
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# --- 2. TAHAP BUILD IMAGE ---
+# ---------------------------------------------------
+# KONFIGURASI BUILD IMAGE DOCKER UNTUK DAST
+# ---------------------------------------------------
+build-image:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: "" 
+    DOCKER_HOST: tcp://docker:2375
+  script:
+    - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER" --password-stdin
+    - docker build -t "$DOCKER_HUB_USER/simagang:$CI_COMMIT_REF_SLUG" .
+    - docker push "$DOCKER_HUB_USER/simagang:$CI_COMMIT_REF_SLUG"
+
+    # - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+    # - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
+    # - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+
+# --- 3. TAHAP DAST MENDALAM (DEEP SCAN) ---
+# ---------------------------------------------------
+# KONFIGURASI DAST UNTUK MELAKUKAN PENGECEKAN ADVANCE
+# ---------------------------------------------------
+dast:
+  stage: dast
+  services:
+    - name: "$DOCKER_HUB_USER/simagang:$CI_COMMIT_REF_SLUG"
+      alias: target-app
+    - name: mysql:8.0
+      alias: mysql
+  variables:
+    # Target Scan Mendalam
+    DAST_WEBSITE: "http://target-app"
+    DAST_FULL_SCAN_ENABLED: "true" # Aktifkan serangan aktif (SQLi, XSS)
+    DAST_BROWSER_SCAN: "true"      # Mendukung Livewire/Filament
+    
+    # Otentikasi Otomatis (Data dari DatabaseSeeder.php)
+    DAST_AUTH_URL: "http://target-app/admin/login"
+    DAST_USERNAME_FIELD: "email"
+    DAST_PASSWORD_FIELD: "password"
+    DAST_AUTH_USERNAME: "admin@simagang.com"
+    DAST_AUTH_PASSWORD: "qwerty"            
+    
+    # Konfigurasi Database CI (Agar App bisa running di CI)
+    DB_HOST: mysql
+    DB_DATABASE: simagang_db
+    DB_USERNAME: root
+    DB_PASSWORD: password
+  # rules:
+  #   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  #   - if: $CI_PIPELINE_SOURCE == "merge_request_event"
