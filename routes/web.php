@@ -55,8 +55,8 @@ use App\Models\Intern;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Route Pendaftaran
-Route::get('/daftar', [RegistrationController::class, 'index'])->name('register.index');
-Route::post('/daftar', [RegistrationController::class, 'store'])->name('register.store');
+Route::get('/register', [RegistrationController::class, 'index'])->name('register.index');
+Route::post('/register', [RegistrationController::class, 'store'])->name('register.store');
 
 // Pendaftaran Berhasil
 Route::get('/pendaftaran-berhasil', function () {
